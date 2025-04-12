@@ -1,0 +1,184 @@
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sport-icon {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  filter: invert(100%);
+  object-fit: cover;
+}
+
+/* Container Styles */
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Styles */
+.website-name {
+  color: #FF6B6B;
+  font-size: 4.5rem;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px rgba(255, 107, 107, 0.5); }
+  to { text-shadow: 0 0 15px rgba(255, 107, 107, 0.8); }
+}
+
+/* Login/Register Box Styles */
+.login-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-5px);
+}
+
+.login-box h2 {
+  margin-bottom: 1.5rem;
+  color: #4ECDC4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Form Styles */
+.login-box label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  text-align: left;
+  font-weight: 500;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1.5rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #4ECDC4;
+  box-shadow: 0 0 8px rgba(78, 205, 196, 0.3);
+  outline: none;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(255, 107, 107, 0.2);
+}
+
+.login-box button:hover {
+  background: linear-gradient(135deg, #FF5757 0%, #FF7B7B 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(255, 107, 107, 0.3);
+}
+
+.login-box button:active {
+  transform: translateY(0);
+}
+
+/* Link Styles */
+.register-link, .login-link {
+  margin-top: 1.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.register-link a, .login-link a {
+  color: #4ECDC4;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.register-link a:hover, .login-link a:hover {
+  color: #FF6B6B;
+  text-decoration: underline;
+}
+
+/* Alert/Message Styles */
+.alert {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.alert-error {
+  background-color: #FFEBEE;
+  color: #C62828;
+  border: 1px solid #EF9A9A;
+}
+
+.alert-success {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #A5D6A7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .login-box {
+      width: 90%;
+      padding: 1.5rem;
+  }
+  
+  .website-name {
+      font-size: 3.5rem;
+  }
+}

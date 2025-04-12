@@ -1,0 +1,70 @@
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black; /* Black background for the page */
+  font-family: Arial, sans-serif;
+  color: white; /* White text for the entire page */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+/* Website name styling */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white; /* White text for the heading */
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* Box container styling */
+.box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Spacing between the boxes */
+}
+
+/* Box styling */
+.box {
+  background-color: purple; /* Purple background for the boxes */
+  color: white; /* White text inside the boxes */
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 20px 40px;
+  border-radius: 15px; /* Curved edges for the boxes */
+  text-align: center;
+  width: 300px; /* Fixed width for the boxes */
+  cursor: pointer; /* Indicates the boxes are clickable */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the boxes */
+.box:hover {
+  background-color: #6a1b9a; /* Darker purple on hover */
+}
+
+/* Table styling */
+table {
+  width: 80%; /* Table takes up 80% of the container width */
+  margin-top: 20px; /* Spacing above the table */
+  border-collapse: collapse; /* Removes spacing between table cells */
+  display: none; /* Tables are hidden by default */
+}
+
+/* Table header and cell styling */
+th, td {
+  padding: 10px;
+  border: 1px solid white; /* White borders for table cells */
+  text-align: left;
+}
+
+/* Table header styling */
+th {
+  background-color: purple; /* Purple background for table headers */
+  color: white; /* White text for table headers */
+}

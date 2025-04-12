@@ -1,0 +1,27 @@
+<?php
+header('Content-Type: application/json');
+require_once __DIR__.'/../../config/db_config.php';
+
+$conn = new mysqli(
+    $db_config['localhost'],
+    $db_config['sreya'],
+    $db_config['sreya'],
+    $db_config['sports_inventory']
+);
+
+$result = $conn->query("
+    SELECT e.*, 
+           (SELECT IFNULL(SUM(quantity), 0) FROM checkouts 
+            WHERE equipment_id = e.equipment_id AND status = 'checked_out') as checkedOut
+    FROM equipment e
+    WHERE e.quantity > 0
+");
+$equipment = $result->fetch_all(MYSQLI_ASSOC);
+
+echo json_encode([
+    'success' => true,
+    'equipment' => $equipment
+]);
+
+$conn->close();
+?>
